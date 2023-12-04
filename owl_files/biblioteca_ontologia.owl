@@ -3,10 +3,10 @@
          xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
          xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
          xmlns:owl="http://www.w3.org/2002/07/owl#"
-         xml:base="biblioteca_ontologia.owl"
-         xmlns="biblioteca_ontologia.owl#">
+         xml:base="owl_files\biblioteca_ontologia.owl"
+         xmlns="owl_files\biblioteca_ontologia.owl#">
 
-<owl:Ontology rdf:about="biblioteca_ontologia.owl"/>
+<owl:Ontology rdf:about="owl_files\biblioteca_ontologia.owl"/>
 
 <owl:Class rdf:about="#Obra">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
@@ -38,6 +38,26 @@
 
 <owl:NamedIndividual rdf:about="#Ficção">
   <rdf:type rdf:resource="#Categoria"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Computação">
+  <rdf:type rdf:resource="#Categoria"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Alan Turing">
+  <rdf:type rdf:resource="#Autor"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Donald Knuth">
+  <rdf:type rdf:resource="#Autor"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Introdução à Computação">
+  <rdf:type rdf:resource="#Livro"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#The Art of Computer Programming">
+  <rdf:type rdf:resource="#Livro"/>
 </owl:NamedIndividual>
 
 

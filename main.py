@@ -7,11 +7,23 @@ if __name__ == "__main__":
 
     
     # Carregando a ontologia
-    onto = get_ontology(r"biblioteca_ontologia.owl").load()
+    onto = get_ontology(r"owl_files\biblioteca_ontologia.owl").load()
     print(f"Título do livro1: {livro1.titulo}")
     print(f"Autor do livro1: {livro1.escritoPor.name}")
     print(f"Categoria do livro1: {livro1.pertenceA.name}")
+    print("-----------------------------------------------")
 
+    print("Livro de Computação 1:")
+    print(f"Título: {livro_introducao.titulo}")
+    print(f"Autor: {livro_introducao.escritoPor.name}")
+    print(f"Categoria: {livro_introducao.pertenceA.name}")
+    print("-----------------------------------------------")
+
+    print("Livro de Computação 2:")
+    print(f"Título: {livro_art_of_programming.titulo}")
+    print(f"Autor: {livro_art_of_programming.escritoPor.name}")
+    print(f"Categoria: {livro_art_of_programming.pertenceA.name}")
+    print("-----------------------------------------------")
 
     # Consulta dinâmica
     novo_livro = Livro("livro2")
