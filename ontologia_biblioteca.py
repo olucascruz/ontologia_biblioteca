@@ -22,18 +22,20 @@ class Categoria(Thing):
 
 # Definindo propriedades
 class escritoPor(ObjectProperty):
+    namespace = onto
     domain = [Livro]
     range = [Autor]
 
 class pertenceA(ObjectProperty):
+    namespace = onto
     domain = [Livro]
     range = [Categoria]
 
 # Adicionando indivíduos
 livro1 = Livro("livro1")
 livro1.titulo = "Aventuras de Owlready"
-livro1.escritoPor = Autor("Autor1")
-livro1.pertenceA = Categoria("Ficção")
+livro1.escritoPor.append(Autor("Autor1"))
+livro1.pertenceA.append(Categoria("Ficção"))
 
 # Adicionando categoria de Computação
 categoria_computacao = Categoria("Computação")
@@ -48,13 +50,13 @@ autor_knuth.nome = "Donald Knuth"
 # Adicionando livros de computação
 livro_introducao = Livro("Introdução à Computação")
 livro_introducao.titulo = "Introdução à Computação"
-livro_introducao.escritoPor = autor_turing
-livro_introducao.pertenceA = categoria_computacao
+livro_introducao.escritoPor.append(autor_turing)
+livro_introducao.pertenceA.append(categoria_computacao)
 
 livro_art_of_programming = Livro("The Art of Computer Programming")
 livro_art_of_programming.titulo = "The Art of Computer Programming"
-livro_art_of_programming.escritoPor = autor_knuth
-livro_art_of_programming.pertenceA = categoria_computacao
+livro_art_of_programming.escritoPor.append(autor_knuth)
+livro_art_of_programming.pertenceA.append(categoria_computacao)
 
 # Salvando a ontologia
-onto.save(file=r"owl_files\biblioteca_ontologia.owl", format="rdfxml")
+onto.save(file=r"owl_files\biblioteca_ontologia.owl")

@@ -8,6 +8,16 @@
 
 <owl:Ontology rdf:about="owl_files\biblioteca_ontologia.owl"/>
 
+<owl:ObjectProperty rdf:about="#escritoPor">
+  <rdfs:domain rdf:resource="#Livro"/>
+  <rdfs:range rdf:resource="#Autor"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#pertenceA">
+  <rdfs:domain rdf:resource="#Livro"/>
+  <rdfs:range rdf:resource="#Categoria"/>
+</owl:ObjectProperty>
+
 <owl:Class rdf:about="#Obra">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
 </owl:Class>
@@ -30,6 +40,8 @@
 
 <owl:NamedIndividual rdf:about="#livro1">
   <rdf:type rdf:resource="#Livro"/>
+  <escritoPor rdf:resource="#Autor1"/>
+  <pertenceA rdf:resource="#Ficção"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Autor1">
@@ -54,10 +66,14 @@
 
 <owl:NamedIndividual rdf:about="#Introdução à Computação">
   <rdf:type rdf:resource="#Livro"/>
+  <pertenceA rdf:resource="#Computação"/>
+  <escritoPor rdf:resource="#Alan Turing"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#The Art of Computer Programming">
   <rdf:type rdf:resource="#Livro"/>
+  <pertenceA rdf:resource="#Computação"/>
+  <escritoPor rdf:resource="#Donald Knuth"/>
 </owl:NamedIndividual>
 
 
