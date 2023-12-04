@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="biblioteca_ontologia.owl"
+         xmlns="biblioteca_ontologia.owl#">
+
+<owl:Ontology rdf:about="biblioteca_ontologia.owl"/>
+
+<owl:Class rdf:about="#Obra">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Pessoa">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Livro">
+  <rdfs:subClassOf rdf:resource="#Obra"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Autor">
+  <rdfs:subClassOf rdf:resource="#Pessoa"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Categoria">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="#livro1">
+  <rdf:type rdf:resource="#Livro"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Autor1">
+  <rdf:type rdf:resource="#Autor"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Ficção">
+  <rdf:type rdf:resource="#Categoria"/>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>
